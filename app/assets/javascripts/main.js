@@ -3,7 +3,7 @@ window.addEventListener("load", function() {
   btn.addEventListener("click", function(e) {
   let btn2 = document.getElementById("main_text").value;
   console.log(btn2)
-  // e.preventDefault();
+  e.preventDefault();
     $.ajax({
       type: 'POST',
       url: '/main/create',
