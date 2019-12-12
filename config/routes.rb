@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get  'men/:id'     => 'men#show'
   delete 'tweet/:id' => 'tweet#destroy'
   get 'main/index' => 'main#index'
+  post 'main/create' =>'main#create'
 end

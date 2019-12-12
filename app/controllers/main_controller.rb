@@ -6,7 +6,7 @@ class MainController < ApplicationController
   def create
     @kotoba= Kotoba.create(information)
     respond_to do|format|
-      format.html {redirect_to:root}
+      format.html {}
       format.json {render json: @kotoba}
     end
   end

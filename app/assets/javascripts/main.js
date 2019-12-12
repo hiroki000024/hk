@@ -3,16 +3,12 @@ window.addEventListener("load", function() {
   btn.addEventListener("click", function(e) {
   let btn2 = document.getElementById("main_text").value;
   console.log(btn2)
-  e.preventDefault();
+  // e.preventDefault();
     $.ajax({
       type: 'POST',
-      url: '/main.json',
-      data: {
-        main: {
-          content: main
-        }
-      },
-      dataType: 'json'
+      url: '/main/create',
+      data: btn2,
+      dataType:'json'
     })
   })
 });
