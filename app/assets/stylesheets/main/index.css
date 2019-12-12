@@ -1,0 +1,33 @@
+.main_wrapper{
+  height: 100vh;
+  width: 100vw;
+  background: #f5f2f2;
+  position: relative;
+}
+.main_header{
+  width: 100%;
+  height: 100px;
+  background: gray;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+}
+.main_contents {
+  width: 100%;
+}
+.main_footer {
+  width: 100%;
+  height: 100px;
+  background: gray;
+  position: absolute;
+  bottom: 0;
+}
+button.main_submit{
+  padding: 1px 30px;
+  font-size: 30px;
+}
+button.main_reset{
+  padding: 1px 10px;
+  font-size: 30px;
+}

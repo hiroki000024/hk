@@ -1,0 +1,24 @@
+.wrapper
+  .header
+    =link_to("King",main_index_path,class: "title")
+  - if hito_signed_in?
+    .botan
+      =link_to("投稿する",'tweet/new',class: "toukou")
+      =link_to("MY","men/#{current_hito.id}",class: "my")
+  - else
+    .botan
+      =link_to("新規登録",new_hito_registration_path,class: "touroku")
+      =link_to("ログイン",new_hito_session_path,class: "login")
+  .content
+    .image-box
+      - @tweet.each do |kotoba|
+        %img.se_img{:src => "#{kotoba.image}",:height => "500",:width => "100%"}/
+        .word-box
+          %p.honoka
+            = kotoba.word
+        .name-box
+          %p= kotoba.hito.adana
+    =paginate(@tweet)
+  .footer
+    %p.sign
+      king.copoletion

@@ -1,0 +1,141 @@
+.wrapper {
+  min-height: 100vh;
+  width:100%;
+  box-sizing: border-box;
+  background-color: #CCFFFF;
+  .header {
+    width: 100%;
+    height: 150px;
+    background-color: #99CCFF;
+    display: flex;
+    .title {
+      text-align: center;
+      font-size: 100px;
+      color: white;
+      margin: auto;
+      text-decoration: none;
+    }
+  }
+  .botan {
+    width:100%;
+    height: 80px;
+    display: flex;
+    margin-top: 50px;
+    .toukou {
+      height: 50px;
+      width: 120px;
+      background-color: pink;
+      font-size: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      border-radius: 30px;
+      margin-left: 68%;
+    }
+    .toukou:hover {
+      background-color: white;
+      color:pink;
+      transition: background-color 0.5s;
+      transition: color 0.3s;
+    }
+    .my {
+      height: 50px;
+      width: 100px;
+      background-color: palegreen;
+      font-size: 30px;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: seashell;
+      border-radius: 30px;
+      margin-left: 100px;
+    }
+    .my:hover {
+      background-color: seashell;
+      color: palegreen;
+      transition: background-color 0.5s;
+      transition: color 0.3s;
+    }
+    .touroku {
+      height: 50px;
+      width: 120px;
+      background-color: rgb(211, 18, 50);
+      font-size: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      border-radius: 30px;
+      margin-left: 68%;
+    }
+    .touroku:hover {
+      background-color: white;
+      color:pink;
+      transition: background-color 0.5s;
+      transition: color 0.3s;
+    }
+    .login {
+      height: 50px;
+      width: 120px;
+      background-color: palegreen;
+      font-size: 30px;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: seashell;
+      border-radius: 30px;
+      margin-left: 100px;
+    }
+    .login:hover {
+      background-color: seashell;
+      color: palegreen;
+      transition: background-color 0.5s;
+      transition: color 0.3s;
+    }
+  }
+  .content {
+    width: 50%;
+    background-color: azure;
+    margin:auto;
+    margin-top: 50px;
+    overflow: auto;
+    .image-box {
+      width: 100%;
+      position: relative;
+      .se_button {
+        position: absolute;
+        top:0;
+        width: 100px;
+        height: 30px;
+        text-indent: 1.1em;
+        &:focus {
+          outline: 0;
+          border: 1px solid blue;
+        }
+      }
+      .se_sent {
+      }
+    }
+    .honoka {
+      float: left;
+      width:50%;
+      height:50px;
+      text-align: left;
+      line-height: 50px;
+      font-family:'游ゴシック体';
+    }
+    .name-box {
+      float: right;
+      width:50%;
+      height:50px;
+      text-align: right;
+      line-height: 50px;
+    }
+  }
+  .sign {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    bottom: 0;
+    font-family: 'Impact'
+  }
+}

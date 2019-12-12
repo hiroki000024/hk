@@ -1,0 +1,18 @@
+.sh_wrapper
+  .sh_adana
+    %h1=current_hito.adana
+  .sh_button
+    =link_to("戻る",root_path,class: "return")
+    =link_to("投稿",tweet_new_path,class:"mytoukou")
+  .sh_buttons
+    =link_to("ログアウト",destroy_hito_session_path,method:"delete",class: "returns")
+    =link_to("編集",root_path,class:"mytoukous")
+  .sh_contents
+    -  @mypagetweet.each do |kotoba|
+      .sh_in_contents{:style => "background-image: url(#{kotoba.image});"}
+        %select.se_button{:name => "example",:style => "width: 200"}
+          %option{:value => "サンプル1"} 編集
+          %option{:value => "サンプル2"} 削除
+        %input.se_sent{:type => "submit", :value => "送信する"}/
+  .sh_footer
+    KingCp

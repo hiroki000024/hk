@@ -1,0 +1,24 @@
+.re_wrapper
+  .re_header
+    %h.sinki 新規登録
+  = form_for(resource,as: resource_name,url: registration_path(resource_name)) do |f|
+    .re_content
+      .re_form
+        = f.label :NickName
+        %br
+        = f.text_field :adana,placeholder: "nickname",class:"form_re"
+      .re_form
+        = f.label :Mail
+        %br
+        = f.email_field :email,placeholder: "mail adress",class:"form_re"
+      .re_form
+        = f.label :Password
+        %br
+        = f.password_field :password,autocomplete: "off",class:"form_re"
+      .re_form
+        = f.label :Password
+        %h again
+        %br
+        = f.password_field :password_confirmation,autocomplete: "off",class:"form_re"
+      .re_button
+        =f.submit "OK!",class:"button_re"

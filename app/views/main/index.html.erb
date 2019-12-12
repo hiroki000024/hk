@@ -1,0 +1,18 @@
+<div class ="main_wrapper">
+  <div class = "main_header">
+    <a href= "/tweet#index">非同期通信の練習</a>
+  <div class= "main_contents">
+    <% @main_tweet.each do|main|%>
+    <%= main.word %>
+    <% end %>
+  </div>
+  <div class= "main_footer">
+      <%= form_tag('/tweet', method: :post) do %>
+        <input type="text" name="word" placeholder="何か入力して下さい" style="width:400px" id="main_text"></input>
+        <input type="text" name="image" placeholder="画像のURL" style="width:200px"></input>
+        <button class="main_submit" type ="submit" id ="main_sub" >送信</button>
+        <button class="main_reset" type="reset" >リセット</button>
+      <% end %>
+      </form>
+  </div>
+</div>

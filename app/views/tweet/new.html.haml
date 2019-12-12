@@ -1,0 +1,15 @@
+.new_wrapper
+  .new_header
+    %p.new_left
+      King
+    =link_to('戻る',root_path,class:'new_right')
+  .new_content
+    %p.toukousuru
+      投稿する
+    = form_tag('/tweet', method: :post) do
+      %input.imgform{:placeholder => 'url',:name => 'image'}/
+      %textarea.textform{:placeholder => 'text',:name => 'word'}
+      %input.sent{:type => "submit",:value => 'SENT'}/
+  .new_footer
+    %p.footer_sign
+      king.copoletion

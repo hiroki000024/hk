@@ -1,0 +1,20 @@
+.re_wrapper
+  .re_header
+    %h.sinki ログイン
+  = form_for(resource,as: resource_name,url: session_path(resource_name)) do |f|
+    .re_content
+      .re_form
+        = f.label :Mail
+        %br
+        = f.email_field :email,placeholder: "mail adress",class:"form_re"
+      .re_form
+        = f.label :Password
+        %br
+        = f.password_field :password,autocomplete: "current_password",class:"form_re"
+      .re_form
+        = f.label :Password
+        %h again
+        %br
+        = f.password_field :password_confirmation,autocomplete: "off",class:"form_re"
+      .re_button
+        =f.submit "OK!",class:"button_re"
