@@ -4,6 +4,7 @@ class MainController < ApplicationController
     @kotoba = Kotoba.new
   end
   def create
+    binding.pry
     @kotoba= Kotoba.create(information)
     respond_to do|format|
       format.html {}
