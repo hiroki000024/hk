@@ -4,12 +4,11 @@ class MainController < ApplicationController
     @kotoba = Kotoba.new
   end
   def create
-    binding.pry
     @kotoba= Kotoba.create(information)
-    respond_to do|format|
-      format.html {}
-      format.json {render json: @kotoba}
-    end
+    # respond_to do|format|
+    #   format.html {}
+    #   format.json {render json: @kotoba}
+    # end
   end
   private
   def information

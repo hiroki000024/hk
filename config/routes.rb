@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   delete 'tweet/:id' => 'tweet#destroy'
   get 'main/index' => 'main#index'
   post 'main/create' =>'main#create'
+  namespace :api do
+    resources :main, only: :index, defaults: { format: 'json' }
+  end
 end

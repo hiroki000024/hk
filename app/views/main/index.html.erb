@@ -3,7 +3,9 @@
     <a href= "/tweet#index">非同期通信の練習</a>
   <div class= "main_contents">
     <% @main_tweet.each do|main|%>
-    <%= main.word %>
+      <div class= "mini_content" data-kotoba-id="<%=main.id%>">
+        <%= main.word %>
+      </div>
     <% end %>
   </div>
   <div class= "main_footer">

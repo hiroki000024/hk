@@ -16,6 +16,13 @@
 }
 .main_contents {
   width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+.mini_content{
+  overflow-wrap: normal;
+  margin-left: 20px;
 }
 .main_footer {
   width: 100%;
