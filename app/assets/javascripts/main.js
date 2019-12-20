@@ -1,5 +1,5 @@
 $(function(){
-  function 追加するdiv(data){
+  function kotobaHTML(data){
     var html =`<div class="mini_content" data-kotoba-id="${data.id}">
                   ${data.word}
 
@@ -21,7 +21,7 @@ $(function(){
     .done(function(ajaxで帰ってきたdata){
       // var html = htmlKotoba(kotoba);
       // $('.main_contents').append(html
-      $('.main_contents').append(追加するdiv(ajaxで帰ってきたdata))
+      $('.main_contents').append(kotobaHTML(ajaxで帰ってきたdata))
       $("#main_text").val("")
     })
     .fail(function(){
