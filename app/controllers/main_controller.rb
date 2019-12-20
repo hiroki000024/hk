@@ -5,10 +5,6 @@ class MainController < ApplicationController
   end
   def create
     @kotoba= Kotoba.create(information)
-    # respond_to do|format|
-    #   format.html {}
-    #   format.json {render json: @kotoba}
-    # end
   end
   private
   def information
