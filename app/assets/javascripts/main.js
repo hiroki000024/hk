@@ -1,7 +1,7 @@
 $(function(){
-  function htmlKotoba(kotoba){
-    var html =`<div class="mini_content" data-kotoba-id="${kotoba.id}">
-                  ${kotoba.word}
+  function 追加するdiv(data){
+    var html =`<div class="mini_content" data-kotoba-id="${data.id}">
+                  ${data.word}
 
               </div>`
     return html
@@ -18,15 +18,17 @@ $(function(){
       processData: false,
       contentType: false,
     })
-    .done(function(kotoba){
-      var html = htmlKotoba(kotoba);
-      $('.main_contents').append(html)
+    .done(function(ajaxで帰ってきたdata){
+      // var html = htmlKotoba(kotoba);
+      // $('.main_contents').append(html
+      $('.main_contents').append(追加するdiv(ajaxで帰ってきたdata))
       $("#main_text").val("")
     })
     .fail(function(){
       arert("エラーが出ております")
     })
   })
+
   var autometion = function(){
     var lastId = $('.mini_content').last().data('kotoba-id');
 
@@ -37,8 +39,17 @@ $(function(){
       data:{id:lastId}
     })
     .done(function(love){
-      console.log(love)
-
+      if (love.length === 0){
+      return 
+      } else {
+        love.foreach( function( value, index, array ) {
+ 
+          // 繰り返し処理を書く
+         
+        });
+      var html = htmlKotoba(love);
+      $('.main_contents').append(html);
+      }
     })
     .fail(function(){
       // alert("更新できません");
